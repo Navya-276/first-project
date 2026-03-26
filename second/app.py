@@ -48,5 +48,5 @@ uploaded_file = st.file_uploader("Upload a file")
 
 if uploaded_file is not None:
     st.write("File uploaded successfully!")
-df=pd.read_csv("data.csv")
+df=pd.read_csv("data.csv",type=["csv"])
 st.write(df)
