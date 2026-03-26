@@ -44,9 +44,9 @@ with st.form("Form"):
     submit=st.form_submit_button("Submit")
 if submit:
     st.write(fname)
-uploaded_file = st.file_uploader("Upload a file")
+uploaded_file = st.file_uploader("Upload a file",type=["csv"])
 
 if uploaded_file is not None:
     st.write("File uploaded successfully!")
-df=pd.read_csv("data.csv",type=["csv"])
+df=pd.read_csv("data.csv")
 st.write(df)
